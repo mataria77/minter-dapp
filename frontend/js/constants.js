@@ -20,3 +20,28 @@ const button_presale_mint_not_whitelisted = "Get on the Whitelist";
 const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint Your NFT";
 const mint_failed = "Minting failed. 😢 Please try again.";
+
+const abi = [
+    /*inputs: [],
+    stateMutability: "nonpayable",
+    type: "constructor",
+    */
+    {
+        "constant":true,
+        "inputs":[],
+        "name":"getInfo",
+        "outputs":[{"name":"","type":"string"}],
+        "payable":false,
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "constant":false,
+        "inputs":[{"name":"_info","type":"string"}],
+        "name":"setInfo",
+        "outputs":[],
+        "payable":false,
+        "stateMutability":"nonpayable",
+        "type":"function"
+    }
+];
