@@ -289,7 +289,7 @@ function setTotalPrice() {
   console.log("PWei" + info.deploymentConfig.mintPrice);
   console.log("minInputValue" + mintInputValue);
 
-  if (info.deploymentConfig.mintPrice == "undefined") {
+  if (info.deploymentConfig.mintPrice == undefined) {
     const totalPriceWei = BigInt(0.001) * BigInt(mintInputValue);
   } else {
     const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
