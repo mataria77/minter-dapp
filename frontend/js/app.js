@@ -155,6 +155,7 @@ async function checkChain() {
 }
 
 async function loadInfo() {
+  console.log(window.contract.methods);
   window.info = await window.contract.methods.getInfo().call();
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
