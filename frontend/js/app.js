@@ -318,7 +318,7 @@ async function mint() {
 
   const amount = parseInt(document.getElementById("mintInput").value);
   //const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
-  const value = BigInt(0) * BigInt(amount);
+  const value = BigInt(1) * BigInt(amount);
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
 
