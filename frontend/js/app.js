@@ -291,7 +291,7 @@ function setTotalPrice() {
 
   let totalPriceWei = 0;
   if (info.deploymentConfig.mintPrice == undefined) {
-    totalPriceWei = BigInt(0) * BigInt(mintInputValue);
+    totalPriceWei = 0.001 * BigInt(mintInputValue);
   } else {
     totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   }
