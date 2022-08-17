@@ -156,8 +156,8 @@ async function checkChain() {
 
 async function loadInfo() {
   console.log(window.contract.methods);
-  //window.info = await window.contract.methods.getInfo().call();
-  window.info = await window.contract;
+  window.info = await window.contract.methods.getInfo().call();
+  //window.info = await window.contract;
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
   const mainHeading = document.getElementById("mainHeading");
