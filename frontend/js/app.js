@@ -288,8 +288,13 @@ function setTotalPrice() {
 
   console.log("PWei" + info.deploymentConfig.mintPrice);
   console.log("minInputValue" + mintInputValue);
-  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
-  
+
+  if (info.deploymentConfig.mintPrice == "undefined") {
+    const totalPriceWei = BigInt(0.001) * BigInt(mintInputValue);
+  } else {
+    const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  }
+
   let priceType = '';
   if(chain === 'rinkeby' || chain === 'ethereum') {
     priceType = 'ETH';
