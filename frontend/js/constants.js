@@ -1,4 +1,4 @@
-const contractAddress = "0xA98E9b640E60bE56c416865c2581d013F732b904"; // Replace with your own contract address
+const contractAddress = "0x16c651CC07b670AF4b37cE473536d9523C1a2aD9"; // Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the Diamond Skull Gang NFT Project!!";
