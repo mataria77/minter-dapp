@@ -291,12 +291,12 @@ function setTotalPrice() {
 
   let totalPriceWei = 0;
   if (info.deploymentConfig.mintPrice == undefined) {
-    totalPriceWei = 0.001 * BigInt(mintInputValue);
+    totalPriceWei = 0.001 * mintInputValue;
   } else {
-    totalPriceWei = info.deploymentConfig.mintPrice * BigInt(mintInputValue);
+    totalPriceWei = info.deploymentConfig.mintPrice * mintInputValue;
   }
   info.deploymentConfig.mintPrice=totalPriceWei;
-  
+
   let priceType = '';
   if(chain === 'rinkeby' || chain === 'ethereum') {
     priceType = 'ETH';
