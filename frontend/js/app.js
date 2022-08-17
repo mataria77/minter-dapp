@@ -293,9 +293,10 @@ function setTotalPrice() {
   if (info.deploymentConfig.mintPrice == undefined) {
     totalPriceWei = 0.001 * BigInt(mintInputValue);
   } else {
-    totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+    totalPriceWei = info.deploymentConfig.mintPrice * BigInt(mintInputValue);
   }
-
+  info.deploymentConfig.mintPrice=totalPriceWei;
+  
   let priceType = '';
   if(chain === 'rinkeby' || chain === 'ethereum') {
     priceType = 'ETH';
