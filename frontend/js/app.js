@@ -289,10 +289,11 @@ function setTotalPrice() {
   console.log("PWei" + info.deploymentConfig.mintPrice);
   console.log("minInputValue" + mintInputValue);
 
+  let totalPriceWei = 0;
   if (info.deploymentConfig.mintPrice == undefined) {
-    const totalPriceWei = BigInt(0) * BigInt(mintInputValue);
+    totalPriceWei = BigInt(0) * BigInt(mintInputValue);
   } else {
-    const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+    totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   }
 
   let priceType = '';
