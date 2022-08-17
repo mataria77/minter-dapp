@@ -291,7 +291,7 @@ function setTotalPrice() {
 
   let totalPriceWei = 0;
   if (info.deploymentConfig.mintPrice == undefined) {
-    totalPriceWei = 0.001 * mintInputValue;
+    totalPriceWei = totalPriceWei * mintInputValue;
   } else {
     totalPriceWei = info.deploymentConfig.mintPrice * mintInputValue;
   }
