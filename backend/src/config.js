@@ -7,8 +7,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Diamond Skull";
-const description = "Remember to replace this description";
+const namePrefix = "Diamond Skull Gang";
+const description = "Diamond Skull Gang - party skulls on blockchain";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
